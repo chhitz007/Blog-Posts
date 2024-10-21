@@ -1,0 +1,25 @@
+<!-- templates/view_post.html -->
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ post.title }}</h1>
+<p>{{ post.content }}</p>
+<p><small class="text-muted">By {{ post.author }}</small></p>
+
+<h2>Comments</h2>
+<form method="POST">
+    <div class="form-group">
+        <label for="comment">Add a comment</label>
+        <textarea name="comment" class="form-control" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Comment</button>
+</form>
+
+<ul class="list-group mt-3">
+    {% for comment in post.comments %}
+        <li class="list-group-item">{{ comment }}</li>
+    {% else %}
+        <li class="list-group-item">No comments yet.</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

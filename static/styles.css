@@ -1,0 +1,18 @@
+/* static/style.css */
+body {
+    padding-top: 20px;
+    background-color: rgba(250, 215, 244, 0.731);
+   
+
+
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+

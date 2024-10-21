@@ -1,0 +1,21 @@
+<!-- templates/edit_post.html -->
+{% extends 'base.html' %}
+{% block content %}
+<h1>Edit Post</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        {{ form.title.label(class="form-label") }}
+        {{ form.title(class="form-control") }}
+    </div>
+    <div class="form-group">
+        {{ form.content.label(class="form-label") }}
+        {{ form.content(class="form-control") }}
+    </div>
+    <div class="form-group">
+        {{ form.tags.label(class="form-label") }}
+        {{ form.tags(class="form-control") }}
+    </div>
+    {{ form.submit(class="btn btn-primary") }}
+</form>
+{% endblock %}
